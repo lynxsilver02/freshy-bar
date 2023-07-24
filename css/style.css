@@ -174,7 +174,70 @@ h1, h2, h3, p, fieldset {
   * GOODS SECTION
 */
 
+.goods {
+  padding: 60px 0 70px;
+}
 
+.goods__title {
+  margin-bottom: 40px;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.goods__list {
+  display: grid;
+  grid-template-columns: repeat(4, 280px); /* создать 4 столбца по 280px */
+  gap: 20px;  /* отступы между карточками */
+}
+
+.cocktail {
+  display: flex;  /* для удобства отображения контента */
+  flex-direction: column;
+  border-radius: 32px;
+  background-color: #FFF;
+  padding: 12px;
+  height: 100%;
+}
+
+.cocktail__img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.cocktail__content {
+  flex-grow: 1; /* при приближение тест тоже будет увеличиваться */
+  display: flex;  /* для удобства отображения контента */
+  flex-direction: column;
+  padding: 12px;
+}
+
+.cocktail__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.cocktail__title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 5px;  /* чтобы контент никогда не прижимался к цене */
+}
+
+.cocktail__price {
+  font-weight: 600;
+}
+
+.cocktail__size {
+  font-size: 12px;
+  font-weight: 600;
+  color: #C1C1C1;
+  align-self: flex-end; /* === margin-left: auto; */
+  margin-bottom: 10px;
+}
+
+.cocktial__btn {
+  margin-top: auto;
+}
 
 /*
   * FOOTER
@@ -215,5 +278,5 @@ h1, h2, h3, p, fieldset {
 }
 
 .footer__developer-link {
-  
+
 }
