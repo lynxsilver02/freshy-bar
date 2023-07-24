@@ -25,14 +25,10 @@
 
 html {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-*, *::before, *::after {
+*, *:before, *:after {
   box-sizing: inherit;  /* наследование от родителя */
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -43,13 +39,14 @@ body {
   font-size: 18px;
   line-height: 1.1; /* высота строки, лучше брать относит.зн. 1.1, 
                     так как это будет относительно шрифта элемента*/
-  /* no-repeat - без повторений; top - прикрепляет к верху
-  contain - растягивает по самому длинному размеру*/
+  /* no-repeat - без повторений; top - прикрепляет к верху (background-position)
+  contain - растягивает по самому длинному размеру (background-size)*/
   background: #F8E8E2 url(../img/bg.svg) no-repeat top/contain;
   color: #000;
 }
 
 button {
+  padding: 0;
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -61,5 +58,11 @@ a {
 }
 
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+h1, h2, h3, p, fieldset {
+  margin: 0;
 }
