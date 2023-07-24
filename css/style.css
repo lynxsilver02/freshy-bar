@@ -66,3 +66,154 @@ ul {
 h1, h2, h3, p, fieldset {
   margin: 0;
 }
+
+/*
+  * ОСНОВНЫЕ КЛАССЫ 
+*/
+
+.btn {
+  border-radius: 40px;
+  background-color: #F44;
+  box-shadow: 0px 4px 20px 0px #FA5A5A;
+  color: #FFF;
+  padding: 12px 28px;
+}
+
+.container {
+  --width: 1180px;  /* кастомное свойство */
+  --padding: 30px;  /* нужны для адаптива */
+  max-width: calc(var(--width) + (var(--padding) * 2));
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}
+
+.text-red {
+  color: #F44;
+}
+
+/*
+  * HEADER
+*/
+
+.header {
+  padding: 32px 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__basket {
+  margin-right: 32px;
+
+}
+
+.header__btn {
+  display: block;
+}
+
+/*
+  * HERO SECTION
+*/
+
+.hero {
+  padding: 30px 0 85px;
+}
+
+.hero__title {
+  font-size: 84px;
+  font-weight: 900;
+  max-width: 880px;
+}
+
+.hero__cups {
+  display: flex;
+  gap: 20px;  /* отступы */
+  /* либо в .hero__cup прописывать margin-right: ...px, 
+  а в .hero__cup :last-child прописывать margin-right: 0 */
+  padding-top: 270px;
+}
+
+.hero__cup {
+  position: relative;
+  width: 380px;
+  height: 382px;
+  border-radius: 24px;
+}
+
+.hero__img {
+  position: absolute;
+  bottom: 50px;
+  /* располагаем стаканчики по центру прямоугольника */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero__cup--pink {
+  background-color: #FF196C;
+}
+
+.hero__cup--orange {
+  background-color: #FFB72A;
+  margin-top: -70px;
+}
+
+.hero__cup--green {
+  background-color: #34B905;
+}
+
+/*
+  * GOODS SECTION
+*/
+
+
+
+/*
+  * FOOTER
+*/
+
+.footer {
+  padding: 30px 0 32px;
+}
+
+.footer__container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr); /* === : 1fr 1fr (fr - frame сетка)*/
+  grid-template-areas: 
+    'logo .'
+    'copyright developer'; /* схема сетки, что где; . - это пустая ячейка*/
+}
+
+.footer__logo {
+  grid-area: logo;  /* указываем имена из grid-template-areas */
+}
+
+.footer__copyright {
+  grid-area: copyright; /* указываем имена из grid-template-areas */
+}
+
+.footer__developer {
+  grid-area: developer; /* указываем имена из grid-template-areas */
+  justify-self: end;  /* прижимаем элемент вправо */
+}
+
+.footer__developer-item {
+  margin-bottom: 10px;
+}
+
+.footer__developer-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__developer-link {
+  
+}
